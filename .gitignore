@@ -1,1 +1,8 @@
+*.pyc
+__pycache__
+*.un~
+*.py~
+db.sqlite3
 venv
+node_modules
+*lock*
