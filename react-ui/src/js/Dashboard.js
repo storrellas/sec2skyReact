@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
+import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -63,6 +64,7 @@ const styles = theme => ({
     position: 'relative',
     whiteSpace: 'nowrap',
     width: drawerWidth,
+    backgroundColor: '#C0C0C0',
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -95,6 +97,11 @@ const styles = theme => ({
   h5: {
     marginBottom: theme.spacing.unit * 2,
   },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9,
+    marginTop:'30'
+  }
 });
 
 class Dashboard extends React.Component {
@@ -148,7 +155,7 @@ class Dashboard extends React.Component {
             </IconButton>
           </Toolbar>
         </AppBar>
-        
+
         <Drawer
           variant="permanent"
           classes={{
@@ -162,6 +169,13 @@ class Dashboard extends React.Component {
             </IconButton>
           </div>
           <Divider />
+
+          <CardMedia
+            className={classes.media}
+            image="https://bdnlab.org/wp-content/uploads/2018/07/sec2sky.jpg"
+            title="Paella dish"
+          />
+
           <List>{mainListItems}</List>
           <Divider />
           <List>{secondaryListItems}</List>
