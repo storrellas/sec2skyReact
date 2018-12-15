@@ -6,9 +6,9 @@ RUN apk add --no-cache --update python3 bash
 ADD . /repo/
 
 # Configure Node
-WORKDIR /repo/react-ui
-RUN npm install
-RUN npm run build
+#WORKDIR /repo/react-ui
+#RUN npm install
+#RUN npm run build
 
 # Configure Django
 WORKDIR /repo/

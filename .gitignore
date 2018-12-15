@@ -3,7 +3,7 @@
 __pycache__
 *.un~
 *.py~
-*dist*
+#*dist*
 db.sqlite3
 venv
 node_modules
