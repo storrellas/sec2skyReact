@@ -120,6 +120,9 @@ class Dashboard extends React.Component {
   render() {
     const { classes } = this.props;
 
+    // Retrieve
+    console.log( sessionStorage.getItem("webserver") )
+
     return (
       <div className={classes.root}>
         <CssBaseline />

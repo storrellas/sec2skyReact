@@ -13,6 +13,15 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
+  <script type="text/javascript">
+  // Check browser support
+  if (typeof(Storage) !== "undefined") {
+      sessionStorage.setItem("webserver", "webpack");
+  } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+  </script>
+
   <script src="../dist/bundle.js"></script>
 </body>
 

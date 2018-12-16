@@ -14,7 +14,15 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <!-- <script src="../dist/bundle.js"></script> -->
+  <script type="text/javascript">
+  // Check browser support
+  if (typeof(Storage) !== "undefined") {
+      // Store
+      sessionStorage.setItem("webserver", "django");
+  } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+  </script>
   <script src="  {% static 'bundle.js' %}"></script>
 
 
