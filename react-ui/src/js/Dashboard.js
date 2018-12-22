@@ -13,11 +13,12 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
+import Map from './Map';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -171,9 +172,12 @@ class Dashboard extends React.Component {
           <List>{secondaryListItems}</List>
         </Drawer>
 
-
-          <Charts />
-
+        <Router>
+          <div>
+            <Route path="/" exact component={Charts} />
+            <Route path="/map/" component={Map} />
+          </div>
+        </Router>
       </div>
     );
   }
